@@ -1,14 +1,17 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Display Text</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-  </head>
-  <body>
-    <form method="POST" action="/flask/display">
-      <label for="text">Enter some text:</label>
-      <input type="text" name="text" id="text">
-      <input type="submit" value="Submit">
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+  Display Text
+{% endblock %}
+
+{% block content %}
+  <div class="text-center" style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+    <form method="POST" action="/flask/display" class="form-inline mx-auto">
+      <div class="form-group mb-2">
+        <label for="text" class="sr-only">Enter some text:</label>
+        <input type="text" name="text" id="text" class="form-control" placeholder="Enter some text">
+      </div>
+      <button type="submit" class="btn btn-primary mb-2 ml-2">Submit</button>
     </form>
-  </body>
-</html>
+  </div>
+{% endblock %}
