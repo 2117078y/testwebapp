@@ -12,7 +12,12 @@
         <h2>ChatGPT Response</h2>
         <p>{{ chatgpt_output }}</p>
         <div class="d-flex justify-content-center">
-            <a href="{{ url_for('display_text') }}" class="btn btn-primary">Go Back</a>
+            <form action="/flask/display" method="get">
+                <button type="submit" class="btn btn-primary">Go Back</button>
+            
+            </form>
+            <a href="https://www.amazon.jp/hz/wishlist/ls/3I9I0ABLPKM42?ref_=wl_share" class="text-primary">実験的ページへ</a>
+            
         </div>
     </div>
 {% endblock %}
