@@ -1,0 +1,18 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+  ChatGPT Output
+{% endblock %}
+
+{% block content %}
+    <div class="text-center my-5" style="height: 100vh; display: flex; flex-direction: column; justify-content: center;">
+        <h2>Input Text</h2>
+        <p>{{ input_text }}</p>
+
+        <h2>ChatGPT Response</h2>
+        <p>{{ chatgpt_output }}</p>
+        <div class="d-flex justify-content-center">
+            <a href="{{ url_for('display_text') }}" class="btn btn-primary">Go Back</a>
+        </div>
+    </div>
+{% endblock %}
